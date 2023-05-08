@@ -1,16 +1,17 @@
 "use client";
-import { FC, ReactNode } from "react";
+
+import { MessagesProvider } from "@/context/messages";
 import {
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-import { MessagesProvider } from "@/context/messages";
+import { FC, ReactNode } from "react";
 
-interface ProvidersProps {
+interface LayoutProps {
   children: ReactNode;
 }
 
-const Providers: FC<ProvidersProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
   const queryClient = new QueryClient();
 
   return (
@@ -20,4 +21,4 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
   );
 };
 
-export default Providers;
+export default Layout;

@@ -1,13 +1,15 @@
+"use client";
+
+import { FC } from "react";
+import ChatInput from "./ChatInput";
+import ChatMessages from "./ChatMessages";
+import ChatHeader from "./ChatHeader";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { FC } from "react";
-import ChatHeader from "@/components/ChatHeader";
-import ChatInput from "@/components/ChatInput";
-import ChatMessages from "@/components/ChatMessages";
+} from "./ui/accordion";
 
 const Chat: FC = () => {
   return (

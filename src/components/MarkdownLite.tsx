@@ -1,11 +1,7 @@
+import React from "react";
 import Link from "next/link";
-import React, { FC } from "react";
 
-interface MarkdownLiteProps {
-  text: string;
-}
-
-const MarkdownLite: FC<MarkdownLiteProps> = ({ text }) => {
+const MarkdownLite = ({ text }: { text: string }) => {
   const linkRegex = /\[(.+?)\]\((.+?)\)/g;
   const parts = [];
 
@@ -23,9 +19,9 @@ const MarkdownLite: FC<MarkdownLiteProps> = ({ text }) => {
 
     parts.push(
       <Link
-        target="_black"
+        target="_blank"
         rel="noopener noreferrer"
-        className="break-words underline underline-offset-2 text-blue"
+        className="break-words underline underline-offset-2 text-blue-600"
         key={linkUrl}
         href={linkUrl}
       >

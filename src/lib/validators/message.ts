@@ -1,9 +1,9 @@
-import {z} from 'zod'
+import { z } from 'zod'
 
 export const MessageSchema = z.object({
-    id: z.string(),
-    isUserMessage: z.boolean(),
-    text: z.string()
+  id: z.string(),
+  text: z.string(),
+  isUserMessage: z.boolean(),
 })
 
 // array validator
